@@ -1,0 +1,21 @@
+.view {
+  background: url("../../assets/desktop.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.top-nav-collapse {
+  background-color: #4285f4;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #4285f4;
+  }
+}
+
+//"https://unsplash.com/photos/wovHP4fcrTM"
