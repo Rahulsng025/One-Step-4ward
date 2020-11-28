@@ -21,6 +21,7 @@ mongoose.connect('mongodb+srv://Rahulsng25:'+ process.env.MONGO_ATLAS_PW  +'@one
 
 //Morgan Middleware
 app.use(morgan('dev'));
+app.use(express.static('uploads'));
 
 //Body-Parser Middleware
 app.use(bodyParser.urlencoded({extended:false}));
@@ -46,6 +47,7 @@ app.use('/contact', contactRoutes);
 app.use('/about', aboutRoutes);
 app.use('/destination', destinationRoutes);
 app.use('/feedback', feedbackRoutes);
+app.use('/uploads', express.static('uploads'));
 
 
 

@@ -4,7 +4,7 @@ const destinationSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title: String,
     description: String,
-    picture: String
+    destinationImage: String
 
 
 })

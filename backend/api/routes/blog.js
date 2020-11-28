@@ -1,6 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const multer = require('multer');
+
+//Multer image store
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './uploads/');
+    },
+    filename: function(req, file, cb) {
+        cb(null, new Date().toISOString().replace(/:/g, '-')+ file.originalname);
+    }
+});
+
+const upload = multer({storage: storage});
 
 const Blog = require('../models/blog');
 
@@ -21,13 +34,15 @@ router.get('/', (req, res, next) => {
 });
 
 // Handling Post Request Route
-router.post('/', (req, res, next) => {
+router.post('/', upload.single('blogImage'),(req, res, next) => {
+    console.log(req.file);
         const blog = new Blog({
             _id: new mongoose.Types.ObjectId(),
             title: req.body.title,
             description: req.body.description,
-            timeDate: req.body.timeDate,
-            picture: req.body.picture
+            blogImage: req.file.path
+            
+            
         })
     blog
     .save()
@@ -36,7 +51,7 @@ router.post('/', (req, res, next) => {
         res.status(200).json({
             message: 'Handling a POST request to blog',
             createdBlog: result
-        });
+       });
     })
     .catch(err => {
         console.log(err);

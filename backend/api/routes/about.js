@@ -1,7 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
+const multer = require('multer');
 
+//Multer image store
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './uploads');
+    },
+    filename: function(req, file, cb) {
+        cb(null, new Date().toISOString().replace(/:/g, '-')+ file.originalname);
+    }
+});
+
+const upload = multer({storage: storage});
 const About = require('../models/about');
 
 // Handling Get Request Route
@@ -21,12 +33,12 @@ router.get('/', (req, res, next) => {
 });
 
 // Handling Post Request Route
-router.post('/', (req, res, next) => {
+router.post('/', upload.single('aboutImage'),(req, res, next) => {
     const about = new About({
         _id: new mongoose.Types.ObjectId(),
         title: req.body.title,
         description: req.body.description,
-        picture: req.body.picture
+        aboutImage: req.file.path
     })
     about
     .save()
