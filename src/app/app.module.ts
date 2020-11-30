@@ -6,11 +6,17 @@ import { NavbarModule, WavesModule } from 'angular-bootstrap-md'
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+// Components
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { DestinationComponent } from './destination/destination.component';
+// Services
+import { BlogService } from './services/blog.service';
+import { DestinationService } from './services/destination.service';
 
 const routes: Routes = [
 
@@ -18,7 +24,8 @@ const routes: Routes = [
   { path: 'register', component: AboutComponent },
   { path: 'about', component: BlogComponent},
   { path: 'blog', component: BlogComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: 'destination', component: DestinationComponent}
 
 ];
 
@@ -29,6 +36,7 @@ const routes: Routes = [
     BlogComponent,
     ContactComponent,
     HomeComponent,
+    DestinationComponent,
 
   ],
   imports: [
@@ -39,9 +47,10 @@ const routes: Routes = [
     NavbarModule, 
     WavesModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BlogService, DestinationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
