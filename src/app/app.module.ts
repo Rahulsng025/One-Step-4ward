@@ -16,7 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { DestinationComponent } from './destination/destination.component';
 // Services
 import { BlogService } from './services/blog.service';
-import { DestinationService } from './services/destination.service';
+
 
 const routes: Routes = [
 
@@ -50,7 +50,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [BlogService, DestinationService],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

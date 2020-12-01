@@ -34,6 +34,7 @@ router.get('/', (req, res, next) => {
 
 //Handling Post Request Route
 router.post('/', upload.single('destinationImage'),(req, res, next) => {
+    console.log(req.file);
     const destination = new Destination({
         _id: new mongoose.Types.ObjectId(),
             title: req.body.title,
