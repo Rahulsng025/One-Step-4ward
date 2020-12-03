@@ -16,16 +16,23 @@ import { HomeComponent } from './home/home.component';
 import { DestinationComponent } from './destination/destination.component';
 // Services
 import { BlogService } from './services/blog.service';
+// Admin Component
+import { BlogAdminComponent } from './admin/blog-admin/blog-admin.component';
+import { DestinationAdminComponent } from './admin/destination-admin/destination-admin.component';
+import { AboutAdminComponent } from './admin/about-admin/about-admin.component';
 
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'register', component: AboutComponent },
-  { path: 'about', component: BlogComponent},
-  { path: 'blog', component: BlogComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: 'destination', component: DestinationComponent}
+  { path: 'about', component: BlogComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'destination', component: DestinationComponent },
+  { path: 'about-admin', component: AboutAdminComponent },
+  { path: 'blog-admin', component: BlogAdminComponent },
+  { path: 'destination-admin', component: DestinationComponent }
 
 ];
 
@@ -37,6 +44,9 @@ const routes: Routes = [
     ContactComponent,
     HomeComponent,
     DestinationComponent,
+    BlogAdminComponent,
+    DestinationAdminComponent,
+    AboutAdminComponent,
 
   ],
   imports: [
