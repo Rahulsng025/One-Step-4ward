@@ -1,7 +1,7 @@
 .view {
   background: url("../../assets/desktop3.jpg") no-repeat center center;
   background-size: cover;
-  height: 40vh;
+  height: 60vh;
 }
 .img {
   background: url() no-repeat center center;
@@ -13,7 +13,7 @@
 }
 .container {
   color: #000;
-  font-family: "Italiana", Georgia, Times, "Times New Roman", serif;
+  font-family: serif;
 }
 
 .navbar {
@@ -26,22 +26,37 @@
 
 .navbar-nav .nav-item .nav-link {
   color: #000;
-  font-family: "Italiana", Georgia, Times, "Times New Roman", serif;
+  font-family: "serif";
   text-indent: 15px;
+  font-size: 17.5px;
 }
 
 .intro {
+  bottom: 10px;
   text-align: center;
   color: #000000;
-  font-family: "Italiana", Georgia, Times, "Times New Roman", serif;
-  // font-family: sebastian bobby;
-  line-height: 15px;
-  letter-spacing: 2px;
+  font-family: serif;
   font-size: 70px;
   text-transform: initial;
   margin-right: 10px;
   position: relative;
   bottom: -15px;
+}
+
+.welcome_to_the_site {
+  margin-top: 30px;
+}
+.welcome_to_the_site .thumb_1 img {
+  width: 500px;
+  height: 650px;
+  border: 5px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+@media (max-width: 767px) {
+  .welcome_to_the_site .thumb_1 img {
+    width: 100%;
+  }
 }
 
 //"https://unsplash.com/photos/wovHP4fcrTM"#ddcbc0
