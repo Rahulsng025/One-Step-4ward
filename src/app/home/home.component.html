@@ -1,3 +1,4 @@
+<!-- Navigation -->
 <header class="h-100">
     <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
       <mdb-navbar-brand>
@@ -6,7 +7,7 @@
         </a>
       </mdb-navbar-brand>
       <links>
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto"  >
           <li class="nav-item active waves-light" [routerLinkActive] = "['active']" mdbWavesEffect>
             <a class="nav-link" [routerLink]="['/']">Home
               <span class="sr-only">(current)</span>
@@ -25,24 +26,59 @@
             <a class="nav-link"  [routerLink]="['/destination']">Destination</a>
           </li>
         </ul>
+        <!-- Social Navigation Icons -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="facebook-f"></mdb-icon></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="twitter"></mdb-icon></a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link"><mdb-icon fab icon="instagram"></mdb-icon></a>
+          </li>
+      </ul>
       </links>
+      
     </mdb-navbar>
-    <!-- Main -->
-    <div class="view intro-2">
-
+    <!-- Header Nav Image -->
+     <div class="view intro-2">
       <div class="full-bg-img">
-        <div class="mask rgba-purple-light flex-center">
-          <div class="container text-center white-text wow fadeInUp">
-            <h2>This Navbar is fixed and transparent</h2>
-            <br>
-            <h5>It will always stay visible on the top, even when you scroll down</h5>
-            <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
-            <br>
-            <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+        <div class="mask flex-center">
+          <div class="container text-center">
+            <h1 style=" font-size: 50px;">One Step Forward <mdb-icon fas icon="shoe-prints" size = "sm" ></mdb-icon> 
+              <mdb-icon fas icon="shoe-prints" size = "sm"></mdb-icon>
+              <mdb-icon fas icon="shoe-prints" size = "sm"></mdb-icon></h1>
+            <h4>Never Let your memories be greater then your dreams</h4>  
           </div>
         </div>
       </div>
-    </div>
-    <!-- /.Main -->
+    </div> 
 </header>
-  <!--Main Navigation-->
+<!-- Second Navigation -->
+<!-- <div class="navbar fixed-center navbar-dark navbar-expand-lg" style="background-color: #ebded6;" >
+  <links>
+   <ul class="navbar-nav" style="transform: translate(150%, 1%);">
+      <li class="nav-item active waves-light" [routerLinkActive] = "['active']" mdbWavesEffect>
+        <a class="nav-link" [routerLink]="" >Start Here</a>
+      </li>
+      <li class="nav-item active waves-light" [routerLinkActive] = "['active']" mdbWavesEffect>
+        <a class="nav-link" [routerLink]="">Destination</a>
+      </li>
+      <li class="nav-item active waves-light" [routerLinkActive] = "['active']" mdbWavesEffect>
+        <a class="nav-link" [routerLink]="">Resources</a>
+      </li>
+      <li class="nav-item active waves-light" [routerLinkActive] = "['active']" mdbWavesEffect>
+        <a class="nav-link" [routerLink]="">Travel Tips</a>
+      </li>
+    </ul>
+  </links>
+</div> -->
+<!-- Introduction about the website Start -->
+<div class="intro">
+<h2>Fetured from the blog</h2>   
+</div>
+<!-- Introduction about the website End -->
+
+
+ 
