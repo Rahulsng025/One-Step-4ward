@@ -2,10 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // For MDB Angular Free
-import { NavbarModule, WavesModule, CarouselModule, IconsModule } from 'angular-bootstrap-md'
+import { NavbarModule, 
+  WavesModule, 
+  CarouselModule, 
+  IconsModule, 
+  CardsModule,
+  PopoverModule,
+  CollapseModule } from 'angular-bootstrap-md'
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 // Components
@@ -57,8 +63,12 @@ const routes: Routes = [
     NavbarModule, 
     WavesModule,
     CarouselModule,
+    CardsModule,
+    PopoverModule,
+    CollapseModule,
     IconsModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule
   ],

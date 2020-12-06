@@ -42,6 +42,7 @@
   position: relative;
   bottom: -15px;
 }
+// Welcome to the OSF
 
 .welcome_to_the_site {
   margin-top: 30px;
@@ -49,7 +50,7 @@
 .welcome_to_the_site .thumb_1 img {
   width: 500px;
   height: 650px;
-  border: 5px solid #ddd;
+  border: 6px solid #ddcbc0;
   border-radius: 4px;
   padding: 5px;
 }
@@ -57,6 +58,26 @@
   .welcome_to_the_site .thumb_1 img {
     width: 100%;
   }
+}
+// Featured Blog Post
+.featured {
+  font-family: serif;
+  margin-left: 765px;
+}
+.featured_blog {
+  margin-top: 40px;
+  background-color: #ddcbc0;
+}
+.bottom_details {
+  margin-top: 70px;
+
+  .nav-link {
+    color: #73736f;
+    font-family: lato, sans-serif;
+  }
+}
+.bottom_details .col-md-3 {
+  margin-top: 30px;
 }
 
 //"https://unsplash.com/photos/wovHP4fcrTM"#ddcbc0
